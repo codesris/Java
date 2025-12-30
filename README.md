@@ -6,6 +6,11 @@ This repository contains **everything I’ve learned while studying Java**, star
 This is a **learning-focused repository**, not a polished library or production-ready codebase.
 
 ---
+graph TD;
+    src-->basics;
+    src-->projects;
+    src-->miniProjects;
+
 
 ## Structure
 
