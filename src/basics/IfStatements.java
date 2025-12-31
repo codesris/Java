@@ -7,9 +7,13 @@ public class IfStatements {
     public static void main(String[] args) {
      Scanner scanner = new Scanner(System.in);
      int age;
+     boolean isStudent;
      
      System.out.print("Enter you age: ");
      age = scanner.nextInt();
+
+    System.out.print("Are you a studentn (true/false)?: ");
+     isStudent = scanner.nextBoolean();
       
      if (age>=65) {
         System.out.println("You are an elder!");
@@ -27,6 +31,13 @@ public class IfStatements {
         System.out.println("You are not born");
      }
 
+     //Boolean
+     if (isStudent) {
+        System.out.println("So, you are a Student!");
+     }
+     else{
+        System.out.println("So, you're not a student");
+     }
      scanner.close();
     }
 }
