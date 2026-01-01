@@ -10,6 +10,7 @@ public class Calculator {
         double sNumber;
         char operator;
         double result;
+        boolean validOperation = true;
 
         System.out.print("Enter first number: ");
         fNumber = scanner.nextDouble();
@@ -27,6 +28,7 @@ public class Calculator {
             case '/' -> {
                 if (sNumber==0) {
                     System.out.println("Cannot divide by zero.");
+                    validOperation = false;
                     yield 0;
                 }
                 yield fNumber / sNumber;
@@ -34,11 +36,14 @@ public class Calculator {
             case '^' -> result = Math.pow(fNumber, sNumber);
 
             default -> {System.out.println("Not a valid operator.");
+            validOperation = false;
             yield 0;
         }
         };
 
-        System.out.printf("%f " +"%c "+ "%f = %.3f", fNumber,operator,sNumber,result);
+        if (validOperation) {
+            System.out.printf("%f " +"%c "+ "%f = %.3f", fNumber,operator,sNumber,result);
+        }
 
 
         scanner.close();
