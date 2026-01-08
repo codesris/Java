@@ -4,6 +4,8 @@ public class MethodExample {
  public static void main(String[] args) {
 
     //method()  a block of reusable code that is executed whenever it is called.
+    //Java does not pass variables it passes arguments (i.e. copies the arguments in new variable)
+    //Java is unware of variables inside another method
 
     String name = "Chasris";
     int age = 22;
